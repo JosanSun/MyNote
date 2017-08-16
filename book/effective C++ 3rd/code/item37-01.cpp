@@ -3,7 +3,7 @@ using namespace std;
 class A
 {
 public:
-	void func(int val = 1)
+	virtual void func(int val = 1)
 	{
 		std::cout << "A->" << val << std::endl;
 	}
