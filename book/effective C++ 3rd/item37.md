@@ -39,6 +39,7 @@ int main(int argc, char* argv[])
 	A*p1 = new A;
 	A*p2 = new B;
 	//B*p3 = new A;    //error
+	//B*p3 = dynamic_cast<B*> (new A);   //dynamic_cast<B*>转化后， p3 = nullptr;
 	B*p3 =  reinterpret_cast<B*> (new A);
 	B*p4 = new B;
 	//test()
@@ -85,6 +86,7 @@ int main(int argc, char* argv[])
 	A*p1 = new A;
 	A*p2 = new B;
 	//B*p3 = new A;    //error
+	//B*p3 = dynamic_cast<B*> (new A);   //dynamic_cast<B*>转化后， p3 = nullptr;
 	B*p3 = reinterpret_cast<B*> (new A);
 	B*p4 = new B;
 	//test()
