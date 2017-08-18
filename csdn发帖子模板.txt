@@ -1,0 +1,2 @@
+- 若文章有什么不足、错误，或者可以改进的地方，欢迎在留言中提出。Github上面可以获得更快的反馈，csdn可能会较慢。
+- 本博文不支持长期更新，最新版博文请移步：我的[Github](https://github.com/JosanSun/MyNote/)
