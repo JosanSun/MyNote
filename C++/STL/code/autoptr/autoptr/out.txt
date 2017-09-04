@@ -1,0 +1,12 @@
+100
+123.25
+20
+-10
+10, 10
+10
+10
+dtor is called
+dtor is called
+itest2: 789
+dtor is called
+dtor is called
