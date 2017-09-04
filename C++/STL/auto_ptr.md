@@ -1,3 +1,4 @@
+[TOC]
 # auto_ptr源码解析以及例子 --auto_ptr_ref
 ## 一、头文件
 ```C++
