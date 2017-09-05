@@ -120,8 +120,10 @@ private:
 	}
 	void swim(int k);
 	void sink(int k);
+	//pq[i]是存放的某种意义上排序后的元素到原来element[]上的位置索引
 	vector<Index> pq;
 	// inverse of pq - idx2Priority[pq[i]] = pq[idx2Priority[i]] = i
+	//idx2Priority[i]则是对应的element[i]在pq[]上的位置索引
 	vector<Index> idx2Priority;
 	vector<Key> element;
 	int sz;
