@@ -13,7 +13,7 @@
 #include <crtdbg.h>
 #include <iostream>
 #include <cstdio>
-#include "auto_ptr02.h"
+#include "01_auto_ptr.h"
 using namespace std;
 using namespace josan;
 class A
