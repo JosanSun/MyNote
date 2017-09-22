@@ -19,6 +19,52 @@
 #include <set>
 using namespace std;
 
+//--------------测试指向POD类型的shared_ptr()
+class A1
+{
+public:
+	A1()
+	{
+		cout << "constructor" << endl;
+	}
+	~A1()
+	{
+		cout << "destructor" << endl;
+	}
+};
+
+class Child;
+
+class Parent
+{
+public:
+	shared_ptr<Child> child;
+};
+
+class Child
+{
+public:
+	shared_ptr<Parent> parent;
+};
+
+
+
+static void test_POD()
+{
+	////shared_ptr指向数组
+	////对于使用new[]进行分配的内存，必须自动以deleter来释放内存
+	//shared_ptr<A1> arrayObj1(new A1[5], [](A1 *p) {delete[] p; });
+	////unique_ptr如何解决指向数组问题
+	//unique_ptr<A1[]> arrayObj2(new A1[4]);
+
+	//测试环形引用
+	shared_ptr<Parent> pA(new Parent);
+	shared_ptr<Child> pB(new Child);
+	pA->child = pB;
+	pB->parent = pA;
+}
+
+
 //---------------测试shared_ptr的各种成员函数  测试用例来自cplusplus.com-------
 
 struct C
@@ -461,8 +507,12 @@ static void testFromCPlusPlus()
 //总测试
 static void test()
 {
-	//测试shared_ptr的各种成员函数  测试用例来自cplusplus.com
-	testFromCPlusPlus();
+	//测试指向POD类型的shared_ptr()
+	test_POD();
+	////测试unique_ptr的各种成员函数  测试用例来自cplusplus.com
+	//testFromCPlusPlus();
+	////测试参数传递
+	//testParameterPass();
 	//测试多态，包括指针的upcast，和downcast的转换。
 	//wait to test
 }
