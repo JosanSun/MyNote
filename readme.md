@@ -1,190 +1,190 @@
-# ÕâÊÇÎÒµÄ±Ê¼Ç²Ö¿â
+# è¿™æ˜¯æˆ‘çš„ç¬”è®°ä»“åº“
 
-## ±Ê¼ÇÄÚÈİ
+## ç¬”è®°å†…å®¹
 
-ÕâÀïÖ÷ÒªÓÃÀ´¼ÇÂ¼×Ô¼ºÔÚ³ÌĞò¿ª·¢¹ı³ÌÖĞµÄÒ»µãĞÄµÃ£¬ÒÔ¼°×Ô¼º¿´ÊéµÄÒ»Ğ©ĞÄµÃ»òÕßÊéÆÀ¡£
+è¿™é‡Œä¸»è¦ç”¨æ¥è®°å½•è‡ªå·±åœ¨ç¨‹åºå¼€å‘è¿‡ç¨‹ä¸­çš„ä¸€ç‚¹å¿ƒå¾—ï¼Œä»¥åŠè‡ªå·±çœ‹ä¹¦çš„ä¸€äº›å¿ƒå¾—æˆ–è€…ä¹¦è¯„ã€‚
 
-## ÎÄ¼şÄ¿Â¼
+## æ–‡ä»¶ç›®å½•
 
-Ä¿Â¼Ò»ÀÀ
+ç›®å½•ä¸€è§ˆ
 
 ```
-¾í ³ÌĞò×¨ÓÃÅÌ µÄÎÄ¼ş¼Ğ PATH ÁĞ±í
-¾íĞòÁĞºÅÎª 2446-31DC
+å· ç¨‹åºä¸“ç”¨ç›˜ çš„æ–‡ä»¶å¤¹ PATH åˆ—è¡¨
+å·åºåˆ—å·ä¸º 2446-31DC
 D:.
-©À©¤book
-©¦  ©À©¤Algorithms 4th Edition
-©¦  ©¦  ©¸©¤01PriorityQueue
-©¦  ©¦      ©À©¤01PriorityQueue
-©¦  ©¦      ©¦  ©¸©¤Debug
-©¦  ©¦      ©¦      ©¸©¤01PriorityQueue.tlog
-©¦  ©¦      ©¸©¤Debug
-©¦  ©¸©¤effective C++ 3rd
-©¦      ©À©¤code
-©¦      ©¸©¤pic
-©À©¤C++
-©¦  ©À©¤langFeature
-©¦  ©¦  ©¸©¤myTestSourceFile
-©¦  ©¦      ©¸©¤02¸ñÊ½»¯Êä³ö
-©¦  ©¦          ©À©¤Debug
-©¦  ©¦          ©¸©¤josan1
-©¦  ©¦              ©¸©¤Debug
-©¦  ©¦                  ©¸©¤josan1.tlog
-©¦  ©À©¤type_traits
-©¦  ©¦  ©À©¤pic
-©¦  ©¦  ©¸©¤type_traits
-©¦  ©¦      ©À©¤01is_constructible
-©¦  ©¦      ©¦  ©¸©¤Debug
-©¦  ©¦      ©¦      ©¸©¤01is_con.41824ABE.tlog
-©¦  ©¦      ©À©¤02is_same
-©¦  ©¦      ©¦  ©¸©¤Debug
-©¦  ©¦      ©¦      ©¸©¤02is_same.tlog
-©¦  ©¦      ©¸©¤Debug
-©¦  ©À©¤µÍµ÷Àà
-©¦  ©¦  ©¸©¤01type_info
-©¦  ©¦      ©À©¤01type_info
-©¦  ©¦      ©¦  ©¸©¤Debug
-©¦  ©¦      ©¦      ©¸©¤01type_info.tlog
-©¦  ©¦      ©¸©¤Debug
-©¦  ©À©¤¹Ø¼ü×Ö
-©¦  ©¦  ©À©¤constexpr
-©¦  ©¦  ©¦  ©À©¤constexpr
-©¦  ©¦  ©¦  ©¦  ©¸©¤Debug
-©¦  ©¦  ©¦  ©¦      ©¸©¤constexpr.tlog
-©¦  ©¦  ©¦  ©¸©¤Debug
-©¦  ©¦  ©À©¤decltype
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤decltype
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤decltype.tlog
-©¦  ©¦  ©À©¤defaultFunction
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤defaultFunction
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤defaultFunction.tlog
-©¦  ©¦  ©À©¤delete
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤delete
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤delete.tlog
-©¦  ©¦  ©À©¤explicit
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤explicit
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤explicit.tlog
-©¦  ©¦  ©À©¤final
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤final
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤final.tlog
-©¦  ©¦  ©À©¤functionTryBlock
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤functionTryBlock
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤functionTryBlock.tlog
-©¦  ©¦  ©À©¤noexceptSpecifier
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤noexceptSpecifier
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤noexcept.E26FA77A.tlog
-©¦  ©¦  ©À©¤override
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤override
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤override.tlog
-©¦  ©¦  ©À©¤PureSpecifier
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤PureSpecifier
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤PureSpecifier.tlog
-©¦  ©¦  ©À©¤StaticAssertion
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©À©¤Release
-©¦  ©¦  ©¦  ©¸©¤StaticAssertion
-©¦  ©¦  ©¦      ©À©¤Debug
-©¦  ©¦  ©¦      ©¦  ©¸©¤StaticAssertion.tlog
-©¦  ©¦  ©¦      ©¸©¤Release
-©¦  ©¦  ©¦          ©¸©¤StaticAssertion.tlog
-©¦  ©¦  ©À©¤typeid
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤typeid
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤typeid.tlog
-©¦  ©¦  ©À©¤__func__
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤__func__
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤__func__.tlog
-©¦  ©¦  ©¸©¤ÀàĞÍ×ª»»
-©¦  ©¦      ©À©¤01static_cast
-©¦  ©¦      ©¦  ©¸©¤Debug
-©¦  ©¦      ©¦      ©¸©¤01static_cast.tlog
-©¦  ©¦      ©À©¤02const_cast
-©¦  ©¦      ©¦  ©¸©¤Debug
-©¦  ©¦      ©¦      ©¸©¤02const_cast.tlog
-©¦  ©¦      ©À©¤03reintepret_cast
-©¦  ©¦      ©¦  ©¸©¤Debug
-©¦  ©¦      ©¦      ©¸©¤03reinte.E66F3254.tlog
-©¦  ©¦      ©À©¤04dynamic_cast
-©¦  ©¦      ©¦  ©¸©¤Debug
-©¦  ©¦      ©¦      ©¸©¤04dynamic_cast.tlog
-©¦  ©¦      ©¸©¤Debug
-©¦  ©À©¤Òì³£
-©¦  ©¦  ©À©¤bad_alloc
-©¦  ©¦  ©¦  ©À©¤bad_alloc
-©¦  ©¦  ©¦  ©¦  ©¸©¤Debug
-©¦  ©¦  ©¦  ©¦      ©¸©¤bad_alloc.tlog
-©¦  ©¦  ©¦  ©¸©¤Debug
-©¦  ©¦  ©À©¤bad_cast
-©¦  ©¦  ©¦  ©À©¤bad_cast
-©¦  ©¦  ©¦  ©¦  ©¸©¤Debug
-©¦  ©¦  ©¦  ©¦      ©¸©¤bad_cast.tlog
-©¦  ©¦  ©¦  ©¸©¤Debug
-©¦  ©¦  ©À©¤bad_exception
-©¦  ©¦  ©¦  ©À©¤bad_exception
-©¦  ©¦  ©¦  ©¦  ©¸©¤Debug
-©¦  ©¦  ©¦  ©¦      ©¸©¤bad_exception.tlog
-©¦  ©¦  ©¦  ©¸©¤Debug
-©¦  ©¦  ©À©¤bad_typeid
-©¦  ©¦  ©¦  ©À©¤bad_typeid
-©¦  ©¦  ©¦  ©¦  ©¸©¤Debug
-©¦  ©¦  ©¦  ©¦      ©¸©¤bad_typeid.tlog
-©¦  ©¦  ©¦  ©¸©¤Debug
-©¦  ©¦  ©À©¤exception
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤exception
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤exception.tlog
-©¦  ©¦  ©À©¤invalid_argument
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤invalid_argument
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤invalid_argument.tlog
-©¦  ©¦  ©À©¤length_error
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤length_error
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤length_error.tlog
-©¦  ©¦  ©À©¤outOfRange
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤outOfRange
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤outOfRange.tlog
-©¦  ©¦  ©À©¤overflow_error
-©¦  ©¦  ©¦  ©À©¤Debug
-©¦  ©¦  ©¦  ©¸©¤overflow_error
-©¦  ©¦  ©¦      ©¸©¤Debug
-©¦  ©¦  ©¦          ©¸©¤overflow_error.tlog
-©¦  ©¦  ©¸©¤runtime_error
-©¦  ©¦      ©À©¤Debug
-©¦  ©¦      ©¸©¤runtime_error
-©¦  ©¦          ©¸©¤Debug
-©¦  ©¦              ©¸©¤runtime_error.tlog
-©¦  ©¸©¤ÖÇÄÜÖ¸Õë
-©¦      ©¸©¤code
-©¦          ©¸©¤autoptr
-©¦              ©À©¤autoptr
-©¦              ©¦  ©¸©¤Debug
-©¦              ©¦      ©¸©¤autoptr.tlog
-©¦              ©¸©¤Debug
+â”œâ”€book
+â”‚  â”œâ”€Algorithms 4th Edition
+â”‚  â”‚  â””â”€01PriorityQueue
+â”‚  â”‚      â”œâ”€01PriorityQueue
+â”‚  â”‚      â”‚  â””â”€Debug
+â”‚  â”‚      â”‚      â””â”€01PriorityQueue.tlog
+â”‚  â”‚      â””â”€Debug
+â”‚  â””â”€effective C++ 3rd
+â”‚      â”œâ”€code
+â”‚      â””â”€pic
+â”œâ”€C++
+â”‚  â”œâ”€langFeature
+â”‚  â”‚  â””â”€myTestSourceFile
+â”‚  â”‚      â””â”€02æ ¼å¼åŒ–è¾“å‡º
+â”‚  â”‚          â”œâ”€Debug
+â”‚  â”‚          â””â”€josan1
+â”‚  â”‚              â””â”€Debug
+â”‚  â”‚                  â””â”€josan1.tlog
+â”‚  â”œâ”€type_traits
+â”‚  â”‚  â”œâ”€pic
+â”‚  â”‚  â””â”€type_traits
+â”‚  â”‚      â”œâ”€01is_constructible
+â”‚  â”‚      â”‚  â””â”€Debug
+â”‚  â”‚      â”‚      â””â”€01is_con.41824ABE.tlog
+â”‚  â”‚      â”œâ”€02is_same
+â”‚  â”‚      â”‚  â””â”€Debug
+â”‚  â”‚      â”‚      â””â”€02is_same.tlog
+â”‚  â”‚      â””â”€Debug
+â”‚  â”œâ”€ä½è°ƒç±»
+â”‚  â”‚  â””â”€01type_info
+â”‚  â”‚      â”œâ”€01type_info
+â”‚  â”‚      â”‚  â””â”€Debug
+â”‚  â”‚      â”‚      â””â”€01type_info.tlog
+â”‚  â”‚      â””â”€Debug
+â”‚  â”œâ”€å…³é”®å­—
+â”‚  â”‚  â”œâ”€constexpr
+â”‚  â”‚  â”‚  â”œâ”€constexpr
+â”‚  â”‚  â”‚  â”‚  â””â”€Debug
+â”‚  â”‚  â”‚  â”‚      â””â”€constexpr.tlog
+â”‚  â”‚  â”‚  â””â”€Debug
+â”‚  â”‚  â”œâ”€decltype
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€decltype
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€decltype.tlog
+â”‚  â”‚  â”œâ”€defaultFunction
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€defaultFunction
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€defaultFunction.tlog
+â”‚  â”‚  â”œâ”€delete
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€delete
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€delete.tlog
+â”‚  â”‚  â”œâ”€explicit
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€explicit
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€explicit.tlog
+â”‚  â”‚  â”œâ”€final
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€final
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€final.tlog
+â”‚  â”‚  â”œâ”€functionTryBlock
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€functionTryBlock
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€functionTryBlock.tlog
+â”‚  â”‚  â”œâ”€noexceptSpecifier
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€noexceptSpecifier
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€noexcept.E26FA77A.tlog
+â”‚  â”‚  â”œâ”€override
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€override
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€override.tlog
+â”‚  â”‚  â”œâ”€PureSpecifier
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€PureSpecifier
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€PureSpecifier.tlog
+â”‚  â”‚  â”œâ”€StaticAssertion
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â”œâ”€Release
+â”‚  â”‚  â”‚  â””â”€StaticAssertion
+â”‚  â”‚  â”‚      â”œâ”€Debug
+â”‚  â”‚  â”‚      â”‚  â””â”€StaticAssertion.tlog
+â”‚  â”‚  â”‚      â””â”€Release
+â”‚  â”‚  â”‚          â””â”€StaticAssertion.tlog
+â”‚  â”‚  â”œâ”€typeid
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€typeid
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€typeid.tlog
+â”‚  â”‚  â”œâ”€__func__
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€__func__
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€__func__.tlog
+â”‚  â”‚  â””â”€ç±»å‹è½¬æ¢
+â”‚  â”‚      â”œâ”€01static_cast
+â”‚  â”‚      â”‚  â””â”€Debug
+â”‚  â”‚      â”‚      â””â”€01static_cast.tlog
+â”‚  â”‚      â”œâ”€02const_cast
+â”‚  â”‚      â”‚  â””â”€Debug
+â”‚  â”‚      â”‚      â””â”€02const_cast.tlog
+â”‚  â”‚      â”œâ”€03reintepret_cast
+â”‚  â”‚      â”‚  â””â”€Debug
+â”‚  â”‚      â”‚      â””â”€03reinte.E66F3254.tlog
+â”‚  â”‚      â”œâ”€04dynamic_cast
+â”‚  â”‚      â”‚  â””â”€Debug
+â”‚  â”‚      â”‚      â””â”€04dynamic_cast.tlog
+â”‚  â”‚      â””â”€Debug
+â”‚  â”œâ”€å¼‚å¸¸
+â”‚  â”‚  â”œâ”€bad_alloc
+â”‚  â”‚  â”‚  â”œâ”€bad_alloc
+â”‚  â”‚  â”‚  â”‚  â””â”€Debug
+â”‚  â”‚  â”‚  â”‚      â””â”€bad_alloc.tlog
+â”‚  â”‚  â”‚  â””â”€Debug
+â”‚  â”‚  â”œâ”€bad_cast
+â”‚  â”‚  â”‚  â”œâ”€bad_cast
+â”‚  â”‚  â”‚  â”‚  â””â”€Debug
+â”‚  â”‚  â”‚  â”‚      â””â”€bad_cast.tlog
+â”‚  â”‚  â”‚  â””â”€Debug
+â”‚  â”‚  â”œâ”€bad_exception
+â”‚  â”‚  â”‚  â”œâ”€bad_exception
+â”‚  â”‚  â”‚  â”‚  â””â”€Debug
+â”‚  â”‚  â”‚  â”‚      â””â”€bad_exception.tlog
+â”‚  â”‚  â”‚  â””â”€Debug
+â”‚  â”‚  â”œâ”€bad_typeid
+â”‚  â”‚  â”‚  â”œâ”€bad_typeid
+â”‚  â”‚  â”‚  â”‚  â””â”€Debug
+â”‚  â”‚  â”‚  â”‚      â””â”€bad_typeid.tlog
+â”‚  â”‚  â”‚  â””â”€Debug
+â”‚  â”‚  â”œâ”€exception
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€exception
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€exception.tlog
+â”‚  â”‚  â”œâ”€invalid_argument
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€invalid_argument
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€invalid_argument.tlog
+â”‚  â”‚  â”œâ”€length_error
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€length_error
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€length_error.tlog
+â”‚  â”‚  â”œâ”€outOfRange
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€outOfRange
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€outOfRange.tlog
+â”‚  â”‚  â”œâ”€overflow_error
+â”‚  â”‚  â”‚  â”œâ”€Debug
+â”‚  â”‚  â”‚  â””â”€overflow_error
+â”‚  â”‚  â”‚      â””â”€Debug
+â”‚  â”‚  â”‚          â””â”€overflow_error.tlog
+â”‚  â”‚  â””â”€runtime_error
+â”‚  â”‚      â”œâ”€Debug
+â”‚  â”‚      â””â”€runtime_error
+â”‚  â”‚          â””â”€Debug
+â”‚  â”‚              â””â”€runtime_error.tlog
+â”‚  â””â”€æ™ºèƒ½æŒ‡é’ˆ
+â”‚      â””â”€code
+â”‚          â””â”€autoptr
+â”‚              â”œâ”€autoptr
+â”‚              â”‚  â””â”€Debug
+â”‚              â”‚      â””â”€autoptr.tlog
+â”‚              â””â”€Debug
 ```
