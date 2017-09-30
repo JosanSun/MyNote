@@ -62,6 +62,12 @@ constexpr const int N = 5;
 
 static constexpr int N1 = 3;
 
+constexpr int scale(int cnt)
+{
+	return 42 * cnt;
+}
+
+
 int main()
 {
 	//constexpr表示NP不能指向其他元素  const表示NP指向的元素是常量
@@ -70,7 +76,11 @@ int main()
 	const int *NP1 = &N1;
 	NP1 = &N;  //ok
 	
-	
+	int arr[scale(2)];
+	//int i = 2;
+	//int arr1[scale(i)];  //error  得出结论： constexpr函数不一定返回常量表达式
+
+
 	const int X = 2;
 	list<sqr1(X)> mylist1;  // OK: sqr1 is constexpr
 	//list<sqr2(X)> mylist2;  // wrong: sqr2 is not constexpr

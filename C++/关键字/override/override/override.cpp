@@ -25,7 +25,7 @@ struct A
 {
 	virtual void foo(){ }
 	void bar();
-	//virtual void fun() override = 0;  //error
+	//virtual void fun() override = 0;  //error override不能重写基类的成员函数
 	//virtual void fun1() override;  //error
 	virtual void fun2() = 0
 	{

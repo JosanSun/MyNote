@@ -17,16 +17,59 @@ class Polymorphic
 	}
 };
 
+class Polymorphic1
+{
+	void Member()
+	{
+	}
+};
+
+class Polymorphic2
+{
+private:
+	int a;
+public:
+	void Member()
+	{
+
+	}
+};
+
+
 int main()
 {
 	try
 	{
 		Polymorphic * pb = 0;
-		std::cout << typeid(*pb).name();
+		std::cout << typeid(*pb).name() << std::endl;  //发生异常
+	}
+	//捕获
+	catch(std::bad_typeid& bt)
+	{
+		std::cerr << "bad_typeid caught: " << bt.what() << '\n';
+	}
+
+
+	try
+	{
+		Polymorphic1 * pb = 0;
+		std::cout << typeid(*pb).name() << std::endl;  //正常执行，注意区分
 	}
 	catch(std::bad_typeid& bt)
 	{
 		std::cerr << "bad_typeid caught: " << bt.what() << '\n';
 	}
+
+
+	try
+	{
+		Polymorphic2 * pb = 0;
+		std::cout << typeid(*pb).name() << std::endl;  //正常执行，注意区分
+	}
+	catch(std::bad_typeid& bt)
+	{
+		std::cerr << "bad_typeid caught: " << bt.what() << '\n';
+	}
+
 	return 0;
 }
