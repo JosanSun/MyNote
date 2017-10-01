@@ -39,6 +39,8 @@ TEST_CASE(test_ctor)
 {
 	//只有这一种构造函数
 	std::mutex num_mutex;  //初始状态是unlock
+	num_mutex.lock();
+	//num_mutex.lock();  //UB   无法连续两次lock().  但是正常的做法应该是进入死锁（死循环）
 }
 
 //测试lock() unlock()

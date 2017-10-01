@@ -1,0 +1,39 @@
+100 successful increases of the counter.
+Total possible add times is 100
+Valid sum percentage is 1.000000
+The time of calculation is 68 ms.
+-------------------
+1000 successful increases of the counter.
+Total possible add times is 1000
+Valid sum percentage is 1.000000
+The time of calculation is 28 ms.
+-------------------
+5000 successful increases of the counter.
+Total possible add times is 5000
+Valid sum percentage is 1.000000
+The time of calculation is 41 ms.
+-------------------
+10000 successful increases of the counter.
+Total possible add times is 10000
+Valid sum percentage is 1.000000
+The time of calculation is 43 ms.
+-------------------
+35571 successful increases of the counter.
+Total possible add times is 100000
+Valid sum percentage is 0.355710
+The time of calculation is 42 ms.
+-------------------
+306856 successful increases of the counter.
+Total possible add times is 1000000
+Valid sum percentage is 0.306856
+The time of calculation is 187 ms.
+-------------------
+1785514 successful increases of the counter.
+Total possible add times is 10000000
+Valid sum percentage is 0.178551
+The time of calculation is 1676 ms.
+-------------------
+11556458 successful increases of the counter.
+Total possible add times is 100000000
+Valid sum percentage is 0.115565
+The time of calculation is 10186 ms.

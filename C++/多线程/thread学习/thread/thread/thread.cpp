@@ -13,7 +13,7 @@
 #include <functional>
 #include <atomic>
 #include <mutex>
-
+#include <algorithm>
 
 #define TEST_CASE(name) static void name()
 
@@ -100,6 +100,32 @@ TEST_CASE(test_ctor)
 	//std::cout << "n!=7,8    " << cnt7 << "    " << cnt8 << std::endl;  
 	////cnt7  1001   cnt8  826
 	////cnt7  101    cnt8  5
+
+	//改测试详细解析，见MostVexingParse.cpp  //http://en.wikipedia.org/wiki/Most_vexing_parse
+	{
+		class background_task
+		{
+		public:
+			void operator()() const
+			{
+				//do_something();
+			}
+		};
+
+		background_task f;
+		std::thread my_thread1(f);  //ok
+
+		////这是一个函数声明，没有创建一个线程
+		//std::thread my_thread(background_task());  //歧义
+
+
+		//以下1, 2是正确做法
+		std::thread my_thread((background_task()));  // 1  OK
+		//std::thread my_thread{background_task()};    // 2  OK
+
+		my_thread.join();
+		my_thread1.join();
+	}
 }
 
 void foo()
@@ -290,7 +316,7 @@ TEST_CASE(test_swap)
 //测试成员函数
 TEST_CASE(test_member_function)
 {
-	//test_ctor();
+	test_ctor();
 	//test_join();
 	//test_joinable();
 	//test_dtor();
@@ -341,10 +367,110 @@ TEST_CASE(test_non_member_function)
 	}
 }
 
+
+//thread的其他测试，作为扩展
+struct func
+{
+	int& i;
+	func(int& i_) : i(i_)
+	{
+	}
+	void operator() ()
+	{
+		for(unsigned j = 0; j < 1000000; ++j)
+		{
+			++i;
+			//do_something(i);           // 1. 潜在访问隐患：悬空引用
+		}
+	}
+};
+
+class thread_guard
+{
+	std::thread& t;
+public:
+	explicit thread_guard(std::thread& t_) :
+		t(t_)
+	{
+	}
+	~thread_guard()
+	{
+		if(t.joinable()) // 1
+		{
+			t.join();      // 2
+		}
+	}
+	thread_guard(thread_guard const&) = delete;   // 3
+	thread_guard& operator=(thread_guard const&) = delete;
+};
+
+TEST_CASE(test_other_func_throw)
+{
+	int some_local_state = 0;
+	func my_func(some_local_state);
+	std::thread t(my_func);
+	try
+	{
+		new int[1000];
+		//do_something_in_current_thread();
+	}
+	catch(...)
+	{
+		t.join();  // 1
+		throw;
+	}
+	t.join();  // 2
+}
+
+class scoped_thread
+{
+	std::thread t;
+public:
+	explicit scoped_thread(std::thread t_) :                 // 1
+		t(std::move(t_))
+	{
+		if(!t.joinable())                                     // 2
+			throw std::logic_error("No thread");
+	}
+	~scoped_thread()
+	{
+		t.join();                                            // 3
+	}
+	scoped_thread(scoped_thread const&) = delete;
+	scoped_thread& operator=(scoped_thread const&) = delete;
+};
+
+TEST_CASE(test_other_func_RAII)
+{
+	//注意区分thread_guard和scoped_thread的初始化方式
+
+	{
+		int some_local_state = 0;
+		func my_func(some_local_state);
+		std::thread t(my_func);
+		thread_guard g(t);  //不需要手动的join()
+		//thread_guard g1((std::thread{my_func}));   //error  临时无法正确赋值
+							//do_something_in_current_thread();
+	}
+
+	{
+		int some_local_state;
+		scoped_thread t(std::thread(func(some_local_state)));    // 4
+		//do_something_in_current_thread();
+	}
+}
+
+TEST_CASE(test_other)
+{
+	test_other_func_throw();
+	test_other_func_RAII();
+}
+
 TEST_CASE(test)
 {
-	test_member_function();
-	test_non_member_function();
+	//test_member_function();
+	//test_non_member_function();
+	test_other();
 }
 
 int main()
