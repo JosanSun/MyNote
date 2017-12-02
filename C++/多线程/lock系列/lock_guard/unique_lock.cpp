@@ -14,8 +14,42 @@
 
 #define TEST_CASE(name) static void name()
 
+std::mutex mut1;
+
+void f()
+{
+	std::unique_lock<std::mutex> lock(mut1);
+	std::cout << "f() is runing" << std::endl;
+	while(1)
+	{
+		std::this_thread::sleep_for(std::chrono::seconds(2));
+		std::cout << "ffffffffffff" << std::endl;
+	}
+}
+
+void g()
+{
+	std::unique_lock<std::mutex> lock(mut1);
+	std::cout << "g() is runing" << std::endl;
+	while(1)
+	{
+		std::this_thread::sleep_for(std::chrono::seconds(2));
+		std::cout << "ggggggggggggg" << std::endl;
+	}
+}
+
 TEST_CASE(test_ctor)
 {
+	std::mutex counter_mutex;
+	std::unique_lock<std::mutex> lock(counter_mutex);
+	////错误，无法定义两个unique_lock指向同一锁
+	//std::unique_lock<std::mutex> lock1(counter_mutex);
+	//std::unique_lock<std::mutex> lock2(counter_mutex);
+
+	std::thread t1(f), t2(g);
+	//但是如果是两个线程，同样可以锁住
+	t1.join();
+	t2.join();
 
 }
 
@@ -109,9 +143,9 @@ TEST_CASE(test_observers)
 TEST_CASE(test)
 {
 	test_ctor();
-	test_dtor();
+	//test_dtor();
 	//test_lock_and_unlock();
-	test_observers();
+	//test_observers();
 }
 
 int main()

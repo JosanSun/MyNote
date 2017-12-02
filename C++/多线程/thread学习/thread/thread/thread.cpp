@@ -329,7 +329,7 @@ TEST_CASE(test_member_function)
 
 //测试非成员函数swap
 //void swap( thread& other ) noexcept;
-TEST_CASE(test_non_member_function)
+TEST_CASE(test_non_member_swap)
 {
 	//正常测试
 	{
@@ -349,7 +349,7 @@ TEST_CASE(test_non_member_function)
 		t2.join();
 	}
 	{
-		std::thread t1;  
+		std::thread t1;
 		std::thread t2(bar);
 
 		std::cout << "thread 1 id: " << t1.get_id() << std::endl;
@@ -365,6 +365,49 @@ TEST_CASE(test_non_member_function)
 		t1.join();
 		//t2.join();  //error   发生system_error异常
 	}
+}
+
+TEST_CASE(test_non_member_sleep_for)
+{
+	using namespace std::chrono_literals;
+	std::cout << "Hello waiter" << std::endl;
+	auto start = std::chrono::high_resolution_clock::now();
+	//等待2秒
+	std::this_thread::sleep_for(3s);
+	auto end = std::chrono::high_resolution_clock::now();
+	std::chrono::duration<double, std::milli> elapsed = end - start;
+	std::cout << "Waited " << elapsed.count() << " ms\n";
+}
+
+// "busy sleep" while suggesting that other threads run 
+// for a small amount of time
+void little_sleep(std::chrono::microseconds us)
+{
+	auto start = std::chrono::high_resolution_clock::now();
+	auto end = start + us;
+	do
+	{
+		std::this_thread::yield();
+	} while(std::chrono::high_resolution_clock::now() < end);
+}
+
+TEST_CASE(test_non_member_yield)
+{
+	auto start = std::chrono::high_resolution_clock::now();
+
+	little_sleep(std::chrono::microseconds(100));
+
+	auto elapsed = std::chrono::high_resolution_clock::now() - start;
+	std::cout << "waited for "
+		<< std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count()
+		<< " microseconds\n";
+}
+
+TEST_CASE(test_non_member_function)
+{
+	//test_non_member_swap();
+	//test_non_member_sleep_for();
+	test_non_member_yield();
 }
 
 
@@ -469,8 +512,8 @@ TEST_CASE(test_other)
 TEST_CASE(test)
 {
 	//test_member_function();
-	//test_non_member_function();
-	test_other();
+	test_non_member_function();
+	//test_other();
 }
 
 int main()

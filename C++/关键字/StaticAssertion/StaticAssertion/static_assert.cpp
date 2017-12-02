@@ -18,8 +18,11 @@
  */
 
 template <class T>
-void swap(T& a, T& b)
+void swap(T& a, T& b) noexcept
 {
+	//static_assert ( bool_constexpr , message )
+	// bool_constexpr为false就会报错，显示message
+	// bool_constexpr为true则会正常执行。很像assert()
 	static_assert(std::is_copy_constructible<T>::value,
 				  "Swap requires copying");
 	static_assert(std::is_nothrow_copy_constructible<T>::value
@@ -30,12 +33,12 @@ void swap(T& a, T& b)
 	a = c;
 }
 
-//template <class T>
-//struct data_structure
-//{
-//	static_assert(std::is_default_constructible<T>::value,
-//				  "Data Structure requires default-constructible elements");
-//};
+template <class T>
+struct data_structure
+{
+	static_assert(std::is_default_constructible<T>::value,
+				  "Data Structure requires default-constructible elements");
+};
 
 struct no_copy
 {
@@ -50,13 +53,13 @@ struct no_default
 
 int main()
 {
-	int a, b;
-	swap(a, b);
+	//int a, b;
+	//swap(a, b);  //ok
 
-	no_copy nc_a, nc_b;
-	swap(nc_a, nc_b); // 1
+	//no_copy nc_a, nc_b;
+	//swap(nc_a, nc_b); // 1
 
-	//data_structure<int> ds_ok;
+	data_structure<int> ds_ok;  //ok
 	//data_structure<no_default> ds_error; // 2
 	return 0;
 }

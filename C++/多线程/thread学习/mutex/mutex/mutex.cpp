@@ -99,7 +99,7 @@ void job_2()
 	mutex.unlock();
 }
 
-volatile int counter(0); // non-atomic counter
+volatile long long int  counter(0); // non-atomic counter
 std::mutex mtx;           // locks access to counter
 
 void attempt_10k_increases(int n)
@@ -126,7 +126,7 @@ TEST_CASE(test_try_lock)
 	//	thread_1.join();
 	//	thread_2.join();
 	//}
-	std::vector<int> ivec{10, 100, 500, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000};
+	std::vector<long long int> ivec{10, 100, 500, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000};
 	auto it = ivec.begin();
 	for(int j = 1; j <= 10; ++j)
 	{
@@ -150,7 +150,7 @@ TEST_CASE(test_try_lock)
 
 TEST_CASE(test_member_function)
 {
-	test_ctor();
+	//test_ctor();
 	/*for(int i = 0; i < 10; ++i)
 	{
 		test_lock_and_unlock();
@@ -174,7 +174,7 @@ int main()
 #endif
 #if OUT
 	FILE* outFile;
-	freopen_s(&outFile, "out1.txt", "w", stdout);
+	freopen_s(&outFile, "out2.txt", "w", stdout);
 #endif
 	//-------------start of program----------------
 
